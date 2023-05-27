@@ -1,0 +1,45 @@
+Class: Scripture
+
+Attributes:
+    // The _reference should be a Rererence//
+    _reference: string
+    _scriptureText: string
+
+Behaviors:
+    HideWords(): void
+    GetRenderedText(): string
+    CompletelyHidden(): void
+    ToString(): string
+    
+Constructors: 
+    Scripture(string: reference, string: text)
+--------------------
+Class: Reference
+
+Attributes:
+    _book: string
+    _chapter: int
+    _verse: int
+    _endVerse: int
+
+Behaviors:
+    ToString(): string
+
+Constructors:
+    Reference(string: book, string: chapter, string: verse)
+    Reference(string: book, string: chapter, string: verse, string: verse)
+--------------------
+Class: Word
+// You need something for the Word class. I recommend a //
+// List<Word> //
+Attributes:
+    _word: string
+
+Behaviors:
+    Hide(): void
+    Show(): void
+    IsHidden(): bool
+    GetRenderedText(): string
+
+Constructors:
+    Word(string: word)
