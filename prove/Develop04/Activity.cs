@@ -26,7 +26,7 @@ class Activity
 
     public int DisplayMenu()
     {
-        clearConsole();
+        ClearConsole();
         Console.WriteLine("Menu Options:");
         Console.WriteLine("   1.- Start breathing activity");
         Console.WriteLine("   2.- Start reflection activity");
@@ -40,7 +40,7 @@ class Activity
 
     public int DisplayWelcomeMessage()
     {
-        clearConsole();
+        ClearConsole();
         Console.WriteLine($"Welcome to the {char.ToUpper(activityName[0])}{activityName.Substring(1)} Activity.");
         Console.WriteLine();
         Console.WriteLine($"{description}");
@@ -53,11 +53,11 @@ class Activity
 
     public void DisplayGetReady()
     {
-        clearConsole();
+        ClearConsole();
         Console.WriteLine("Get ready...");
     }
 
-    public void clearConsole()
+    public void ClearConsole()
     {
         Console.Clear();
     }

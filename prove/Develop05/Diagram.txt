@@ -1,0 +1,55 @@
+class Goal: (Base)
+
+Attributes:
+    _goalName(string)
+    _goalDescription(string)
+    _goalPoint(int)
+
+Behaviors:
+    *SaveToFile(): void
+    *LoadFile(): void
+    *RecordEvent()
+    *SetPoint()
+    *AddPoint()
+
+Constructors:
+    Goal(string: name, string: description, int: point) : base(name, description,points)
+
+class SimpleGoal: Goal (Derived)
+
+Behaviors:
+    IsComplete()
+
+class EternalGoal: Goal
+
+
+class CheckListGaol: Goal
+
+Attributes:
+    _bonus (int)
+    _pointNumber(int)
+    _goalNumber(int)
+
+Behaviors:
+    *IsComplete()
+    *AddBonus()
+    *SetPointNumber()
+    *SetGoalNumber()
+
+class User:
+
+Attributes:
+    _name (String)
+    _points (int)
+
+Behaviors:
+    *AddPoints()
+
+
+class Game:
+
+Attributes:
+    _userChoice 
+
+Behaviors:
+    *DisplayMenu()
