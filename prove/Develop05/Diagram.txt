@@ -1,55 +1,93 @@
-class Goal: (Base)
+Parent abstract Class:  Goal
+    Attributes:
+        private _goal: string
+        private _description: string
+        private _complete: bool
+        private _points: int
+        private _numDone: int
+        private _numMax: int
+        
+    Constructor:
+        public Goal(goal, description, points)
 
-Attributes:
-    _goalName(string)
-    _goalDescription(string)
-    _goalPoint(int)
+    Behaviors:
+        public RecordEvent: abstract
+        public GetTotalPOints: abstract
+        
+        public IsComplete: bool
+        public GetGoal: string
+        public GetPoints: int
+        public GetNumDone: int
+        public GetNumMax: int
 
-Behaviors:
-    *SaveToFile(): void
-    *LoadFile(): void
-    *RecordEvent()
-    *SetPoint()
-    *AddPoint()
+        public SetGoal: void
+        public SetDescription: void
+        public SetComplete: void
+        public SetNumDone: void
+        public SetNumMax: void
+        public SetPoints: void
 
-Constructors:
-    Goal(string: name, string: description, int: point) : base(name, description,points)
+-----------------------------------------------------------------        
 
-class SimpleGoal: Goal (Derived)
+Child Class:  SimpleGoal
+    Attributes:
 
-Behaviors:
-    IsComplete()
+    Constructor:
+        public SimpleGoal(goal, description, points): Goal(goal, description, points)
 
-class EternalGoal: Goal
+    Behaviors:
+        public RecordEvent:  override void
+        public GetTotalPoints: override int
+-----------------------------------------------------------------
 
+Child Class:  EternalGoal
+    Attributes:
 
-class CheckListGaol: Goal
+    Constructor:
+        public EternalGoal(goal, description, points): Goal(goal, description, points)
 
-Attributes:
-    _bonus (int)
-    _pointNumber(int)
-    _goalNumber(int)
+    Behaviors:
+        public RecordEvent:  override void
+        public GetTotalPoints: override int
+-----------------------------------------------------------------
 
-Behaviors:
-    *IsComplete()
-    *AddBonus()
-    *SetPointNumber()
-    *SetGoalNumber()
+Child Class:  ChecklistGoal
+    Attributes:
+        private _bonusPoints: int
+        private _numberToBonus: int
 
-class User:
+    Constructor:
+        public ChecklistGoal(goal, description, points, numberToBonus, bonusPoints): Goal(goal, description, points)
 
-Attributes:
-    _name (String)
-    _points (int)
+    Behaviors:
+        public RecordEvent:  override void
+        public GetTotalPoints: override int
 
-Behaviors:
-    *AddPoints()
+-----------------------------------------------------------------        
 
+Class: FileHandler
+    Attributes:
+        private _filename: string
+        private _goalsList: List<string>
 
-class Game:
+    Constructor:
+        public FileHandler (filepath, goalsList)
 
-Attributes:
-    _userChoice 
+    Behaviors:
+        public WriteFile: void
+        public ReadFile: void
 
-Behaviors:
-    *DisplayMenu()
+-----------------------------------------------------------------
+
+Class:  Menu
+    Attributes:
+        public _menuList: List<string>
+        public _userEntry: int
+
+    Constructor:
+        public Menu(){ BuildMenuList }
+
+    Behaviors:
+        public DisplayMenu: int
+        public GetMenuCount: int
+        private BuildMenuList: void

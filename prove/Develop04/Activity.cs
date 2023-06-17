@@ -26,6 +26,7 @@ class Activity
 
     public int DisplayMenu()
     {
+        
         ClearConsole();
         Console.WriteLine("Menu Options:");
         Console.WriteLine("   1.- Start breathing activity");
