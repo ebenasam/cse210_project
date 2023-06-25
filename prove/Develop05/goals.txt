@@ -1,0 +1,7 @@
+500
+SimpleGoal~~Give a talk~~Give a talk at church meeting~~50~~True
+EternalGoal~~Pray everyday~~Pray at least two times a day~~100
+ChecklistGoal~~Do home visit~~Do home visit for next three Sundays~~75~~25~~3~~4
+SimpleGoal~~Pass sacrament~~Pass sacrament at sacrament meeting~~50~~True
+EternalGoal~~Visit the temple~~Visit the this june~~100
+ChecklistGoal~~wake up at 5:30am~~Wake up at 5:30am for two days~~30~~10~~2~~2

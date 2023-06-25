@@ -1,19 +1,19 @@
-public class SimpleGoal : Goal{
+public class SimpleGoal : Goal
+{
 
-    public SimpleGoal(bool isNew): base(isNew){
-        //set to 1.  meaning as soon as they get 1 done, it's complete.  
+    public SimpleGoal(bool isNew): base(isNew)
+    {
         base.SetNumMax(1);
     }
 
-    public override void RecordEvent(){
-        //simply set to complete and add it to the base class
+    public override void RecordEvent()
+    {
         base.SetComplete(true);
         base.SetNumDone(1);
     }
     
     public override string GetXofYSummary()
     {
-        //return empty since this is only used for checklist type.  
         return "";
     }
 }
