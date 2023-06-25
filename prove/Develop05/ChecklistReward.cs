@@ -1,9 +1,12 @@
 class ChecklistRewards:Rewards{
 
-    public ChecklistRewards(int trigger): base(trigger){
+    public ChecklistRewards(int trigger): base(trigger)
+    {
+        
     }
 
-    public override void BuildRewards(){
+    public override void BuildRewards()
+    {
         int i = 0;
         AddRewardItem(i++,"Get 'er Done");
         AddRewardItem(i++,"Task Master");

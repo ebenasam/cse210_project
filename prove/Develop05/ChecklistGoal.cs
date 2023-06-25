@@ -1,4 +1,5 @@
-public class ChecklistGoal: Goal{
+public class ChecklistGoal: Goal
+{
     
     public ChecklistGoal(bool isNew):base(isNew)
     {
@@ -6,7 +7,8 @@ public class ChecklistGoal: Goal{
             Console.WriteLine ("How many times does this goal need to be accomplished for a bonus?  ");
             int userInput =-1;
 
-            while (!int.TryParse(Console.ReadLine(),out userInput)){
+            while (!int.TryParse(Console.ReadLine(),out userInput))
+            {
                 Console.Clear();
                 Console.WriteLine("Please enter a valid number.\nHow many times does this goal need to be accomplished for a bonus?  ");
             }
@@ -15,7 +17,8 @@ public class ChecklistGoal: Goal{
 
             Console.WriteLine("What is the bonus for accomplishing it that many times?  ");
            
-            while (!int.TryParse(Console.ReadLine(),out userInput)){
+            while (!int.TryParse(Console.ReadLine(),out userInput))
+            {
                 Console.Clear();
                 Console.WriteLine("Please enter a valid number.\nWhat is the bonus for accomplishing it that many times?    ");                
             }
@@ -26,13 +29,15 @@ public class ChecklistGoal: Goal{
     public override void RecordEvent()
     {
         base.SetNumDone(1);
-        if (base.GetNumDone() >= base.GetNumMax()){
+        if (base.GetNumDone() >= base.GetNumMax())
+        {
             base.SetComplete(true);
         }
     }
     
     public override int GetPoints(){
-        if (base.GetNumDone() >= base.GetNumMax()){
+        if (base.GetNumDone() >= base.GetNumMax())
+        {
             return base.GetPoints() + base.GetBonus();
         }
         else{
@@ -40,11 +45,13 @@ public class ChecklistGoal: Goal{
         }
     }
 
-    public override string GetXofYSummary(){
+    public override string GetXofYSummary()
+    {
         return $" -- Currently completed: {base.GetNumDone()}|{base.GetNumMax()}";
     }
 
-    public override string GetCheckBox(){
+    public override string GetCheckBox()
+    {
         return base.GetNumDone().ToString();
     }
 }
