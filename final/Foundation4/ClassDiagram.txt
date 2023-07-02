@@ -1,0 +1,50 @@
+Class Activity: Abstract
+    Attributes:
+        private _date: string
+        private _activityLength: string
+
+    Behaviors:
+        public virtual GetDistance(): float
+        public virtual GetSpeed(): float
+        public virtual GetPace(): float
+        public virtual GetActivityLength(): float
+        public GetSummary(): string
+
+    Constructor:
+        public Activity(date:string, activityLength:string)
+
+_________________________________________________________________________________________
+
+Class Running (child)
+    Attributes:
+        private _distance: float
+    
+    Behaviors:
+        public override GetDistance(): float
+
+    Constructor:
+        public Running(distance: float, date:string, activityLength:string) :base(date, activityLength)
+
+_________________________________________________________________________________________
+
+Class StationaryBicicle (child)
+    Attributes:
+        private _speed: float
+    
+    Behaviors:
+        public override GetSpeed(): float
+
+    Constructor:
+        public StationaryBicicle(speed:float, date:string, activityLength:string) :base(date, activityLength)
+
+_________________________________________________________________________________________
+
+Class Swimming (child)
+    Attributes:
+        private _laps: int
+    
+    Behaviors:
+        public override GetDistance(): float
+
+Constructor:
+        public Swimming(laps:int, date:string, activityLength:string, distance:float) :base(date, activityLength)

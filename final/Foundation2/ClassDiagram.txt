@@ -1,0 +1,69 @@
+Class: Address:
+    Attributes:
+        private _streetAddress: string
+        private _country: string
+        private _isUSAAddress: bool
+    
+    Behaviors:
+        private SetCountryBoolean(): void
+        public GetIsUSAAddress() :bool
+        public GerStreetAddress(): string
+
+    Constructors:
+        public Address(streetAddress: string, country:string)
+_________________________________________________________________________________________
+
+Class: Customer
+    Attributes:
+        private _customerName: string
+        private _customerAddress: Address
+        private isUSAAddress: bool
+    
+    Behaviors:
+        public SetUSAAddress(): void
+        public GetIsUSAAddress(): bool
+        public GetCustomerAddress(): string
+
+    Constructors:
+        public Customer(customerName:string, customerAddress: Address)
+
+_________________________________________________________________________________________
+
+Class: Order
+    Attributes:
+        private _products: List<Product>
+        private _customer: Customer
+        private _IsUSAAddress: bool
+        private _sumOfProductPrices: float
+        private _shippingCost: float
+        private _totalPrice: float
+
+    Behaviors:
+        private GetTotalPrice(): void
+        private CalculateSumOfProductPrices(): void
+        private CalculateShipping(): void
+        public GetShippingLabel(): string
+        public GetPackingLabel(): string
+        public GetFinalBillLabel(): string
+
+    Constructors:
+         public Order(productList:List<Product>, customer:Customer)
+
+_________________________________________________________________________________________
+
+Class: Product
+    Attributes:
+        private _productName: string
+        private _productID: string
+        private _productPrice: float
+        private _totalProductPrice: float
+        private _quantity: int
+
+    Behaviors:
+        private CalculateTotalProductPrice(): void
+        public GetTotalPrice(): float
+        public GetPackingLabel(): string
+
+    Constructors:
+        public Product(productName:string, productID:string, productPrice:float, quantity:int)
+       

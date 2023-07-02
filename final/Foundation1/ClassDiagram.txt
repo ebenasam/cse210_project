@@ -1,0 +1,39 @@
+Class: Comment
+    Attributes:
+        private _name: string
+        private _comment: string
+
+    Behaviors:
+        public GetComment(): string
+        public GetCommentAuthor(): string
+
+    Constructor:
+        public Comment(name:string, Comment:string)
+_________________________________________________________________________________________
+
+Class: Video
+    Attributes:
+        private _title: string
+        private _author: string
+        private _length: int
+        private _comment: List<Comment>
+        private _commentCount: int
+
+    Behaviors:
+        public DisplayVideoInfo(): void
+
+    constructor:
+        public Video(title:string, author: string, length: int, comment: List<Comment>)
+__________________________________________________________________________________________
+
+Class: FileHandler
+    Attributes:
+        private _filename: string
+        private _videoList: List<Video>
+        **private _csvDelimiter: string
+
+    Behaviors:
+        public ReadFile: List<Video>
+
+    Constructor:
+        FileHandler(filename:string)
