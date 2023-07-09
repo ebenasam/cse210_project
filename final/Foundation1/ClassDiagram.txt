@@ -33,7 +33,7 @@ Class: FileHandler
         **private _csvDelimiter: string
 
     Behaviors:
-        public ReadFile: List<Video>
+        public ReadFile(): List<Video>
 
     Constructor:
         FileHandler(filename:string)
