@@ -27,18 +27,18 @@ class Program
     static void StandardDisplayEvents(Event e, FileHandler f)
     {
         Console.WriteLine($"{e.GetStandardDesc()}\n");
-        f.writeFile(e.GetStandardDesc());
+        f.WriteFile(e.GetStandardDesc());
     }
     
     static void FullDisplayEvents(Event e, FileHandler f)
     {
         Console.WriteLine($"{e.GetFullDesc()}\n");
-        f.writeFile(e.GetFullDesc());
+        f.WriteFile(e.GetFullDesc());
     }
 
     static void ShortDisplayEvents(Event e, FileHandler f)
     {
         Console.WriteLine($"{e.GetShortDesc()}\n");
-        f.writeFile(e.GetShortDesc());
+        f.WriteFile(e.GetShortDesc());
     }
 }

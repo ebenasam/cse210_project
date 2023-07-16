@@ -9,7 +9,7 @@ class OutdoorGathering:Event
 
     public override string GetFullDesc()
     {
-        string description = $"Full Marketing Material\n=======================\n{base.GetEventType()} Event\n{base.GetTitle()}\n{base.GetDescription()}\nWeather Forecast for Event: {_weatherForecast}\n{base.GetDate()} at {base.GetTime()}\n{base.GetAddress().GetAddress()}";
+        string description = $"Full Marketing Material\n------------------------\n{base.GetEventType()} Event\nTitle: {base.GetTitle()}\nDescription: {base.GetDescription()}\nWeather Forecast for Event: {_weatherForecast}\nDate: {base.GetDate()}\nTime: {base.GetTime()}\nLocation: {base.GetAddress().GetAddress()}";
         return description;
     }
 }

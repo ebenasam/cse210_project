@@ -49,7 +49,7 @@ class Event
 
     public string GetStandardDesc()
     {
-        string description = $"Standard Marketing Material\n<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>\n{_eventTitle} Event\n{_description}\n{_date} at {_time}\n{_address.GetAddress()}";
+        string description = $"Standard Marketing Material\n--------------------------\nTitle: {_eventTitle}\nDescription: {_description}\nDate: {_date}\nTime:  {_time}\nLocation: {_address.GetAddress()}";
         return description;
     }
 
@@ -60,7 +60,7 @@ class Event
 
     public string GetShortDesc()
     {
-        string description = $"Short Marketing Material\n<<<<<<<<<<<<<<<>>>>>>>>>>>>>>\n{_eventType} Event\n{_eventTitle}\n{_date}";
+        string description = $"Short Marketing Material\n---------------------------\n{_eventType} Event\nTitle: {_eventTitle}\nDate: {_date}";
         return description;
     }
 }

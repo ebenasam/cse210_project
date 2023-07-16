@@ -10,7 +10,7 @@ class Lectures:Event
     }
     public override string GetFullDesc()
     {
-        string description = $"Full Marketing Material\n=======================\n{base.GetEventType()} Event\n{base.GetTitle()}\nGuest Speaker:  {_speaker}\n{base.GetDescription()}\nSeating Capacity: {_capacity}\n{base.GetDate()} at {base.GetTime()}\n{base.GetAddress().GetAddress()}";
+        string description = $"Full Marketing Material\n------------------------\n{base.GetEventType()} Event\nTitle: {base.GetTitle()}\nGuest Speaker:  {_speaker}\nDescription: {base.GetDescription()}\nSeating Capacity: {_capacity}\nDate: {base.GetDate()}\nTime: {base.GetTime()}\nLocation: {base.GetAddress().GetAddress()}";
         return description;
     }
 }
